@@ -4,7 +4,6 @@ document.addEventListener("DOMContentLoaded",()=>{
 
     myButton.addEventListener('click',()=>{
         chrome.tabs.query({ currentWindow: true, active: true }, function (tabs) {
-            console.log(tabs[0].url);
             console.log(tabs[0].title);
             tabTitle.innerHTML = tabs[0].title;
         });
